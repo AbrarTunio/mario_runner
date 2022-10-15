@@ -1,0 +1,72 @@
+#game {
+  width: 500px;
+  height: 200px;
+  border-bottom: 6px dotted black;
+  margin: auto;
+  position: relative;
+}
+h3,
+h4 {
+  text-align: center;
+}
+h3 {
+  color: navy;
+  background-color: goldenrod;
+  width: 500px;
+  margin: auto;
+}
+
+#character {
+  width: 50px;
+  height: 100px;
+  position: absolute;
+  bottom: 0px;
+  left: 50px;
+}
+
+#block {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: red;
+  border: 2px solid red;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  animation: slide;
+  /* left: 30px; */
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+@keyframes slide {
+  from {
+    right: 0px;
+  }
+  to {
+    right: 480px;
+  }
+}
+
+.jump {
+  animation-name: jump;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+}
+
+@keyframes jump {
+  0% {
+    bottom: 0%;
+  }
+  30% {
+    bottom: 30%;
+  }
+  70% {
+    bottom: 30%;
+  }
+  100% {
+    bottom: 0%;
+  }
+}
